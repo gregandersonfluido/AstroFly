@@ -1,0 +1,257 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Products">
+  <div class="products-hero">
+    <div class="container">
+      <h1>Advanced Drone Solutions</h1>
+      <p class="tagline">Cutting-edge autonomous aerial systems for security and industrial applications</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="products-grid">
+        <!-- AstroGuard X1 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/images/products/astroguard-x1.jpg" alt="AstroGuard X1 Security Drone">
+          </div>
+          <div class="product-content">
+            <h2>AstroGuard X1</h2>
+            <p class="product-type">Security Drone</p>
+            <p class="product-description">
+              Our flagship autonomous security drone engineered to revolutionize aerial surveillance. Integrating advanced AI, state-of-the-art sensor technology, and seamless enterprise connectivity.
+            </p>
+            <div class="product-features">
+              <span>45 min Flight Time</span>
+              <span>4K Camera</span>
+              <span>Thermal Imaging</span>
+              <span>AI-Powered Analytics</span>
+            </div>
+            <a href="/products/astroguard-x1" class="button button-primary">Learn More</a>
+          </div>
+        </div>
+
+        <!-- AstroCargo D3 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/images/products/astrocargo-d3.jpg" alt="AstroCargo D3 Delivery Drone">
+          </div>
+          <div class="product-content">
+            <h2>AstroCargo D3</h2>
+            <p class="product-type">Autonomous Delivery Drone</p>
+            <p class="product-description">
+              Revolutionize aerial logistics with our autonomous delivery drone featuring robust payload handling capabilities, advanced navigation and real-time monitoring systems.
+            </p>
+            <div class="product-features">
+              <span>5kg Payload</span>
+              <span>40 min Flight Time</span>
+              <span>Precision Drop-off</span>
+              <span>Secure Cargo Bay</span>
+            </div>
+            <a href="/products/astrocargo-d3" class="button button-primary">Learn More</a>
+          </div>
+        </div>
+
+        <!-- AstroInspect Z2 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/images/products/astroinspect-z2.jpg" alt="AstroInspect Z2 Industrial Inspection Drone">
+          </div>
+          <div class="product-content">
+            <h2>AstroInspect Z2</h2>
+            <p class="product-type">Industrial Inspection Drone</p>
+            <p class="product-description">
+              High-precision industrial inspection drone with ultra-high resolution imaging, advanced sensor technologies, and automated defect detection systems.
+            </p>
+            <div class="product-features">
+              <span>8K Imaging</span>
+              <span>LiDAR Mapping</span>
+              <span>Automated Analytics</span>
+              <span>35 min Flight Time</span>
+            </div>
+            <a href="/products/astroinspect-z2" class="button button-primary">Learn More</a>
+          </div>
+        </div>
+
+        <!-- AstroRescue R1 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/images/products/astrorescue-r1.jpg" alt="AstroRescue R1 Emergency Response Drone">
+          </div>
+          <div class="product-content">
+            <h2>AstroRescue R1</h2>
+            <p class="product-type">Emergency Response Drone</p>
+            <p class="product-description">
+              Designed for rapid aerial support during emergencies and disaster scenarios, providing critical situational awareness and response capabilities.
+            </p>
+            <div class="product-features">
+              <span>80 km/h Speed</span>
+              <span>Thermal Imaging</span>
+              <span>Night Vision</span>
+              <span>35 min Flight Time</span>
+            </div>
+            <a href="/products/astrorescue-r1" class="button button-primary">Learn More</a>
+          </div>
+        </div>
+
+        <!-- AstroSurvey Q1 -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="/images/products/astrosurvey-q1.jpg" alt="AstroSurvey Q1 Geospatial Mapping Drone">
+          </div>
+          <div class="product-content">
+            <h2>AstroSurvey Q1</h2>
+            <p class="product-type">Geospatial Mapping Drone</p>
+            <p class="product-description">
+              High-precision aerial mapping and surveying for urban planning, agriculture, and environmental monitoring with centimeter-level accuracy.
+            </p>
+            <div class="product-features">
+              <span>Multispectral Imaging</span>
+              <span>50 min Flight Time</span>
+              <span>GNSS Positioning</span>
+              <span>On-board Processing</span>
+            </div>
+            <a href="/products/astrosurvey-q1" class="button button-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Need Help Choosing the Right Drone?</h2>
+        <p>Our team of specialists can help you identify the perfect solution for your specific needs.</p>
+        <div class="cta-buttons">
+          <a href="/contact" class="button button-accent">Contact Us</a>
+          <a href="/solutions" class="button button-secondary">Explore Solutions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .products-hero {
+    background: var(--gradient-primary);
+    color: white;
+    padding: var(--space-xl) 0;
+    text-align: center;
+  }
+  
+  .products-hero h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .tagline {
+    font-size: 1.5rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Products Grid */
+  .products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    margin-top: var(--space-lg);
+  }
+  
+  .product-card {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .product-image {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+  }
+  
+  .product-card:hover .product-image img {
+    transform: scale(1.05);
+  }
+  
+  .product-content {
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: var(--space-xs);
+    color: var(--color-primary);
+  }
+  
+  .product-type {
+    color: var(--color-secondary);
+    font-weight: 500;
+    margin-bottom: var(--space-md);
+    font-size: 1.1rem;
+  }
+  
+  .product-description {
+    margin-bottom: var(--space-md);
+    flex-grow: 1;
+  }
+  
+  .product-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+  
+  .product-features span {
+    background-color: var(--color-light);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 992px) {
+    .product-card {
+      grid-template-columns: 1fr;
+    }
+    
+    .product-image {
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .products-hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .tagline {
+      font-size: 1.2rem;
+    }
+  }
+</style>

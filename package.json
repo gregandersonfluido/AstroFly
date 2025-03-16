@@ -1,0 +1,17 @@
+{
+  "name": "astrofly-website",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Corporate website for AstroFly Robotics",
+  "author": "AstroFly Robotics",
+  "scripts": {
+    "dev": "npx astro dev",
+    "start": "npx astro dev",
+    "build": "npx astro build",
+    "preview": "npx astro preview",
+    "astro": "npx astro"
+  },
+  "dependencies": {
+    "astro": "^5.5.2"
+  }
+}

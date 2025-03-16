@@ -1,0 +1,103 @@
+---
+// Main layout for the AstroFly website
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Intelligent Aerial Security & Automation for the Future" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={description} />
+		<link rel="icon" type="image/png" href="/images/logo.png" />
+		<title>{title} | AstroFly Robotics</title>
+		<link rel="stylesheet" href="/styles/global.css" />
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="logo">
+					<a href="/">
+						<img src="/images/logo.png" alt="AstroFly Robotics Logo" />
+					</a>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li class="dropdown">
+							<a href="/products">Products</a>
+							<div class="dropdown-content">
+								<a href="/products/astroguard-x1">AstroGuard X1</a>
+								<a href="/products/astrocargo-d3">AstroCargo D3</a>
+								<a href="/products/astroinspect-z2">AstroInspect Z2</a>
+								<a href="/products/astrorescue-r1">AstroRescue R1</a>
+								<a href="/products/astrosurvey-q1">AstroSurvey Q1</a>
+							</div>
+						</li>
+						<li><a href="/about">About Us</a></li>
+						<li class="dropdown">
+							<a href="/solutions">Solutions</a>
+							<div class="dropdown-content">
+								<a href="/solutions/security">Security</a>
+								<a href="/solutions/manufacturing">Manufacturing</a>
+							</div>
+						</li>
+						<li><a href="/contact">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="mobile-nav-toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</header>
+		
+		<main>
+			<slot />
+		</main>
+		
+		<footer>
+			<div class="container">
+				<div class="footer-grid">
+					<div class="footer-logo">
+						<img src="/images/logo.png" alt="AstroFly Robotics Logo" />
+						<p>"Intelligent Aerial Security & Automation for the Future"</p>
+					</div>
+					<div class="footer-links">
+						<h3>Quick Links</h3>
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="/products">Products</a></li>
+							<li><a href="/about">About Us</a></li>
+							<li><a href="/solutions">Solutions</a></li>
+							<li><a href="/contact">Contact</a></li>
+						</ul>
+					</div>
+					<div class="footer-contact">
+						<h3>Contact</h3>
+						<p>Support: +1-800-ASTR-OFLY (278-767-359)</p>
+						<p>Email: <a href="mailto:support@astroflyrobotics.com">support@astroflyrobotics.com</a></p>
+						<p>Support Portal: <a href="https://www.astroflyrobotics.com/support" target="_blank">www.astroflyrobotics.com/support</a></p>
+					</div>
+				</div>
+				<div class="copyright">
+					<p>&copy; {new Date().getFullYear()} AstroFly Robotics. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Mobile navigation toggle
+			document.querySelector('.mobile-nav-toggle')?.addEventListener('click', () => {
+				document.querySelector('nav')?.classList.toggle('active');
+				document.querySelector('.mobile-nav-toggle')?.classList.toggle('active');
+			});
+		</script>
+	</body>
+</html>
